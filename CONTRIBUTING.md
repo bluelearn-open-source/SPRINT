@@ -31,7 +31,7 @@ in `contributors` folder and name the file as `YOUR-GITHUB-USERNAME.json`. Do no
 }
 ```
 
-##### Note:
+#### Note:
 
 ```
 "github-username" 
@@ -50,13 +50,13 @@ any playlist/song from https://spotify.com/
 any color in hex format (example: #fff44f). 
 You can pick a colour from https://www.google.com/search?q=color+picker
 ```
-#### Step#6: Add your files 
+### Step#6: Add your files 
 `git add -A`
-#### Step#7: Commit your changes 
+### Step#7: Commit your changes 
 `git commit -m  "added myself"`
 
-#### Step#8: Push to your fork 
+### Step#8: Push to your fork 
 `git push origin new-user` and [submit a pull request](https://github.com/Clinify-Open-Sauce/SPRINT/compare).
 
-#### Step#9: Pat your self on the back
+### Step#9: Pat your self on the back
  and wait for your pull request to be reviewed and merged.
