@@ -8,7 +8,7 @@ export default function Layout({ children, noAppBar }) {
                 !noAppBar &&
                 <AppBar position="static" className={styles.appbar}>
                     <Toolbar classes={{ root: styles.toolbarRoot }}>
-                        <img src="/bluesprint3.svg" className={styles.hacktoberfestLogo} />
+                        <img src="/bluesprint.svg" className={styles.hacktoberfestLogo} />
                     </Toolbar>
                 </AppBar>
             }
