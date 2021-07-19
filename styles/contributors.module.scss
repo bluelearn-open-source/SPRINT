@@ -1,0 +1,112 @@
+.contributorContainer {
+    height: 95vh;
+    align-items: center;
+    .contributorWrapper {
+        height: 90%;
+        border-radius: 10px;
+        padding: 4rem;
+        .hacktoberfestContainer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .hacktoberfestImage {
+                width: 90%;
+            }
+        }
+        .musicPlayerContainer {
+            width: 80%;
+            height: auto;
+        }
+        .personContainer {
+            .detailsContainer {
+                padding-left: 1rem;
+                flex-direction: column;
+                align-self: center;
+                .personName {
+                    align-self: center;
+                    font-size: 2rem;
+                    margin-bottom: 8px;
+                }
+                .githubLink {
+                    color: white;
+                    text-decoration: none;
+                }
+                .githubContainer {
+                    opacity: 0.7;
+                    .githubIcon {
+                        margin-right: 8px;
+                    }
+                }
+                .githubContainer:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            .certificateTextContainer {
+                padding-top: 32px;
+                .certificateHeader {
+                    font-size: 2rem;
+                }
+                .certificateSubText {
+                    font-size: 1.5rem;
+                    color: #fff;
+                    padding-top: 16px;
+                    .hacktoberLink {
+                        color: #FE6C3E;
+                        opacity: 0.8;
+                        text-decoration: none;
+                        margin: 0 8px;
+                        width: 100%;
+                    }
+                    .hacktoberLink:hover {
+                        opacity: 1;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.homeIcon{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+
+@media screen and (max-width: 991px) {
+    .homeIcon{
+        left: 30px;
+    }
+    .contributorWrapper{
+        height: 100vh !important;
+        overflow: scroll;
+        padding: 2rem !important;
+    }
+    .personContainer{
+        width: 100% !important;
+    }
+    .certificateHeader {
+        font-size: 1rem !important;
+        text-align: center;
+        width: 100% !important;
+    }
+    .certificateSubText {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+    .personDetailContainer{
+        justify-content: center;
+        text-align: center;
+    }
+    .hacktoberfestContainer{
+        margin-top: 24px !important;
+        height: auto !important;
+    }
+}

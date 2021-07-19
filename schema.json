@@ -1,0 +1,55 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "blcs", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"github-username",
+		"favourite-emoji",
+		"favourite-music",
+		"favourite-color"
+	],
+	"properties": {
+		"github-username": {
+			"$id": "#root/github-username", 
+			"title": "Github-username", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"tiluckdave"
+			],
+			"pattern": "^\\S*$"
+		},
+		"favourite-emoji": {
+			"$id": "#root/favourite-emoji", 
+			"title": "Favourite-emoji", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"🚀"
+			],
+			"pattern": "^.*$"
+		},
+		"favourite-music": {
+			"$id": "#root/favourite-music", 
+			"title": "Favourite-music", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"https://open.spotify.com/playlist/4AYHrhNnF9VaSH8s4JhHDR?si=a94b5c1ab6074d92"
+			],
+			"pattern": "^https:\/\/open.spotify.com/playlist"
+		},
+		"favourite-color": {
+			"$id": "#root/favourite-color", 
+			"title": "Favourite-color", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"#3D5AFF"
+			],
+			"pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+		}
+	}
+}
