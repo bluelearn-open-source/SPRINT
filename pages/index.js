@@ -39,7 +39,7 @@ const Home = ({ contributors }) => (
     <Grid className={styles.welcomeGridWrapper} container>
       <Typography variant={"h1"} className={styles.welcomeText}>Let's change the world together with Open source!</Typography>
       <Typography variant={"h2"} className={styles.welcomeSubText}>BlueLearn Open-Sauce-Club is open to everyone whether you're new to development, a student or a long-time contributor. Open your first pull request and generate a personalized music certificate at
-      <a className={styles.githubLink} href="https://github.com/Clinify-Open-Sauce/coding-sprint" target="_blank">here.</a>
+      <a className={styles.githubLink} href="https://github.com/Clinify-Open-Sauce/coding-sprint" target="_blank">here</a>
       </Typography>
     </Grid>
     <Grid container className={styles.arrowContainer}>
