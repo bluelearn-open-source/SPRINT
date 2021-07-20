@@ -3,39 +3,32 @@ import { Typography, Grid, Avatar } from '@material-ui/core';
 import FallingDownArrow from '../components/FallingDownArrow';
 import Chip from '@material-ui/core/Chip';
 import Link from 'next/link'
+import Head from 'next/head'
 import Layout from '../components/Layout';
-import fs from 'fs'
-import path from 'path'
+import { getContributers } from '../utils/getContributers';
+// import fs from 'fs'
+// import path from 'path'
 
 export async function getStaticProps() {
-  const contributorsDirectory = path.join(process.cwd(), 'contributors')
-  const contributorFiles = fs.readdirSync(contributorsDirectory)
-  let contributorsArray = []
-  contributorFiles.map(filename => {
-    const filePath = path.join(contributorsDirectory, filename)
-    try {
-      const fileContents = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-      contributorsArray.push(fileContents)
-    }
-    catch(e) {
-      console.log('Error reading file -' + filename)
-    }
-  })
+  let contributors = await getContributers()
+  // await Promise.all(contributors)
+  contributors = await Promise.all(contributors)
+  // console.log(contributors)
   return {
     props: {
-      contributors: contributorsArray
+      contributors
     },
     revalidate: 1
   }
 }
-const Home = ({ contributors }) => (
-  <Layout>
-    <head>
+const Home = ({ contributors }): JSX.Element => (
+  <Layout noAppBar>
+    <Head>
       <title>BlueLearn X BlueSprint</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="shortcut icon" href="/favicon.ico" />
-    </head>
+    </Head>
     <Grid className={styles.welcomeGridWrapper} container>
       <Typography variant={"h1"} className={styles.welcomeText}>Let's change the world together with Open source!</Typography>
       <Typography variant={"h2"} className={styles.welcomeSubText}>BlueLearn Open-Sauce-Club is open to everyone whether you're new to development, a student or a long-time contributor. Open your first pull request and generate a personalized music certificate at

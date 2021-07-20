@@ -1,13 +1,15 @@
 import dynamic from 'next/dynamic'
 import { Grid, Typography } from '@material-ui/core'
 import Layout from '../../components/Layout'
+//@ts-ignore
 import styles from '../../styles/contributors.module.scss'
 import PersonAvatar from '../../components/PersonAvatar'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import HomeIcon from '@material-ui/icons/Home';
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
+import { getContributer } from '../../utils/getContributers'
+// import fs from 'fs'
+// import path from 'path'
 
 const MusicPlayer = dynamic(
 	() => import('../../components/MusicPlayer'),
@@ -25,27 +27,12 @@ export async function getServerSideProps({ params }) {
 		console.error(json)
 		throw new Error('Failed to fetch API')
 	}
-	const contributorsDirectory = path.join(process.cwd(), 'contributors')
-	const contributorFiles = fs.readdirSync(contributorsDirectory)
-	let contributorsArray = []
-	contributorFiles.map(filename => {
-		const filePath = path.join(contributorsDirectory, filename)
-		try {
-			const fileContents = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-			contributorsArray.push(fileContents)
-		}
-		catch (e) {
-			console.log('Error reading file -' + filename)
-		}
-
-	})
-
-	let obj = contributorsArray.find(o => o["github-username"] === `${params.slug}`);
-
+	const contributorData= await getContributer(params.slug)
+	// console.log(contributorData)
 	return {
 		props: {
 			githubUser: json,
-			contributorData: obj
+			contributorData
 		}
 	}
 }
