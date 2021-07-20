@@ -28,6 +28,7 @@ export async function getServerSideProps({ params }) {
 		throw new Error('Failed to fetch API')
 	}
 	const contributorData= await getContributer(params.slug)
+	console.log(contributorData)
 	return {
 		props: {
 			githubUser: json,

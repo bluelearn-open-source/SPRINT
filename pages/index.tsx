@@ -10,9 +10,10 @@ import { getContributers } from '../utils/getContributers';
 // import path from 'path'
 
 export async function getStaticProps() {
-  const contributors = await getContributers()
-  await Promise.all(contributors)
-  console.log(contributors)
+  let contributors = await getContributers()
+  // await Promise.all(contributors)
+  contributors = await Promise.all(contributors)
+  // console.log(contributors)
   return {
     props: {
       contributors
