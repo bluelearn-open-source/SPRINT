@@ -4,7 +4,7 @@ const Named = () => {
 			style={{
 				marginLeft: "auto",
 				marginRight: "auto",
-                marginTop:"15vh"
+                marginTop:"15vh",
 			}}
 		>
 			<div
@@ -29,7 +29,7 @@ const Named = () => {
 				>
 					<p
 						style={{
-							fontSize: 64,
+							fontSize: 32,
 							// lineHeight: "100%",
 							color: "rgba(61, 90, 254, 1)",
                         margin:"0px"
@@ -40,7 +40,7 @@ const Named = () => {
 					</p>
 					<p
 						style={{
-							fontSize: 64,
+							fontSize: 32,
 							// lineHeight: "100%",
 							color: "white",
                         margin:"0px"
@@ -66,7 +66,7 @@ const Named = () => {
 				<div style={{ width: 8 }} />
 				<p
 					style={{
-						fontSize: 64,
+						fontSize: 32,
 						// lineHeight: "100%",
 						color: "rgba(254, 108, 62, 1)",
                         margin:"0px"
@@ -77,7 +77,7 @@ const Named = () => {
 			</div>
 			<p
 				style={{
-					fontSize: 80,
+					fontSize: 40,
 					fontStyle: "italic",
 					// lineHeight: "%",
 					color: "white",
