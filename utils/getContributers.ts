@@ -3,7 +3,8 @@ export const getContributer = async (name:string) => {
     const req = await fetch(url);
 
 	if (req.status !== 200) {
-		throw new Error(`Failed to fetch user API from getContributer ${url}`)
+		console.error(`Failed to fetch user API from getContributer ${url}`)
+        return undefined
 	}
 	const obj = await req.json()
     return obj

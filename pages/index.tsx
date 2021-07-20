@@ -5,7 +5,9 @@ import Chip from '@material-ui/core/Chip';
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../components/Layout';
+import Header from '../components/header';
 import { getContributers } from '../utils/getContributers';
+
 // import fs from 'fs'
 // import path from 'path'
 
@@ -30,6 +32,11 @@ const Home = ({ contributors }): JSX.Element => (
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <Grid className={styles.welcomeGridWrapper} container>
+   {/* <Header/> */}
+   <div>
+
+   <img  className='logo'src='/bluesprint.svg'></img>
+   </div>
       <Typography variant={"h1"} className={styles.welcomeText}>Let's change the world together with Open source!</Typography>
       <Typography variant={"h2"} className={styles.welcomeSubText}>BlueLearn Open-Sauce-Club is open to everyone whether you're new to development, a student or a long-time contributor. Open your first pull request and generate a personalized music certificate at
       <a className={styles.githubLink} href="https://github.com/Clinify-Open-Sauce/coding-sprint" target="_blank">here</a>

@@ -4,3 +4,12 @@ html {
 body {
     margin: 0;
 }
+.logo{
+    transform: scale(0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    /* margin-right:auto ;
+    margin-left: auto; */
+}
