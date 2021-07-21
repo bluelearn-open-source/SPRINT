@@ -17,7 +17,7 @@ export const getContributers = async () => {
 
     obj = obj.filter(i=>i.startsWith('contributors/'))
     obj = obj.map(i=>i.replace('contributors/','').replace('.json',''))
-    obj.remove(obj.indexOf('YogPanjarale'))
+    obj.slice(obj.indexOf('YogPanjarale'),1)
     obj.unshift("YogPanjarale")
     // console.log(obj)
     const contributers=await obj.map(async (item)=>{
