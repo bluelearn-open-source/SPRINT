@@ -1,6 +1,6 @@
 # Hey! Welcome to the BlueLearn Sprint
 
-##### ⚠️ Disclaimer (Pull requests here won’t count toward actual SPRINT compitition)
+##### ⚠️ Disclaimer (Pull requests here won’t count toward actual SPRINT competition)
 
 #### Why?
  This repo is to welcome beginners to Github and the opensource community by helping them learn how to make their first PR and contributions to open source!
